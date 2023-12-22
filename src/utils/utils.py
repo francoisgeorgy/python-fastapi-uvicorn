@@ -1,5 +1,7 @@
+import ifaddr
 
-def get_cube_ip(starts_with=['192', '10'], default='localhost'):
+
+def get_host_ip(starts_with=['192', '10'], default='localhost'):
     adapters = ifaddr.get_adapters()
     for adapter in adapters:
         for ip in adapter.ips:
